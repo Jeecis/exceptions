@@ -9,10 +9,12 @@
 using namespace std;
 
 void printDate(vector<int> date) {
-vector<string> months = {"January", "February",
+    // using vector to easily access a month name
+    vector<string> months = {"January", "February",
     "March", "April", "May", "June", "July",
     "August", "September", "October", "November", "December"};
 
+    // calculating what kind of suffix is needed
     string suffix;
     if (date[1]==1) {
         suffix = "st";
@@ -24,6 +26,7 @@ vector<string> months = {"January", "February",
         suffix = "th";
     }
 
+    //formatting and printing date
     string fullDate = months[date[0] - 1]+", "+to_string(date[1])+suffix+", "+to_string(date[2]);
     cout << fullDate << "\n";
 }
@@ -43,18 +46,25 @@ vector<string> split(const string &str, char delimiter) {
 
 vector<int> validateDate(string date) {
     int year, month, day;
+
+    //we initialize the maximum day array for each month so its easier work with them
     vector maxDays = {31,28,31,30,31,30,31,31,30,31,30,31};
 
     vector<string> tokens = split(date, '-');
 
+    //Didnt really know what to throw if the whole date is incoreectly formatted
     if (tokens.size() != 3) {
         throw invalid_argument("Invalid date format");
     }
 
-
+    // Since stoi can throw an error we put the whole expression in try - catch
      try {
          year = stoi(tokens[2]);
+
+         // copilot wrote this line
         bool isLeap = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+
+         // in case it is a leap year we re-initialize the february max date
         if (isLeap) {
             maxDays[1] =29;
         }
@@ -62,6 +72,8 @@ vector<int> validateDate(string date) {
         throw invalidMonth();
     }
 
+    // I kept the invalid month check inside the try-catch block because it makes it a bit easier to read
+    // comparing to when it is put outside the try catch block
     try {
         month = stoi(tokens[1]);
         if (month < 1 || month > 12) {
@@ -80,7 +92,7 @@ vector<int> validateDate(string date) {
         throw invalidDay();
     }
 
-
+    //Decided to return a 3 entry long vector so its easier to work with in printDate function
     return vector{month, day, year};
 
 }
@@ -91,7 +103,9 @@ int main(){
 
     std::cin >> date;
 
+    // Date partitions consists of 3 ints month, day, year
     vector<int> datePartitions;
+
     try {
         datePartitions = validateDate(date);
     }catch (const exception& e) {
@@ -99,6 +113,7 @@ int main(){
         return 1;
     }
 
+    // technically can throw an error, but in our program it shouldn't due to previous validation
     try {
         printDate(datePartitions);
     }catch (const exception& e) {
