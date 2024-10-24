@@ -10,7 +10,7 @@ using namespace std;
 
 class invalidMonth: public exception {
 public:
-    invalidMonth() { msg = "Invalid year format, please enter the year properly "; }
+    invalidMonth() { msg = "Invalid month format, please enter the month properly "; }
 
     //asked chatGPT how to override what method
     const char* what() const noexcept override {

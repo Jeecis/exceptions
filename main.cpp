@@ -62,7 +62,7 @@ vector<int> validateDate(string date) {
          year = stoi(tokens[2]);
 
          // copilot wrote this line
-        bool isLeap = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+        bool isLeap = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 
          // in case it is a leap year we re-initialize the february max date
         if (isLeap) {
