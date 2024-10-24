@@ -1,0 +1,18 @@
+# ninja log v6
+29	624	7514641512157864	CMakeFiles/Exceptions.dir/ErrorClasses/InvalidMonth.cpp.obj	203d7c2afdf13001
+38	620	7514641512241545	CMakeFiles/Exceptions.dir/ErrorClasses/InvalidYear.cpp.obj	5205e309d4d02210
+19	624	7514641512057941	CMakeFiles/Exceptions.dir/ErrorClasses/InvalidDay.cpp.obj	9316aed73bd3ddca
+7	1117	7514646795012720	CMakeFiles/Exceptions.dir/main.cpp.obj	1bde87369f540f0e
+1118	1349	7514646806105729	Exceptions.exe	30092f7960ae4391
+4	387	7514650456698969	build.ninja	4e51d5bef69c2765
+25	472	7514650457627916	CMakeFiles/Exceptions.dir/ErrorClasses/InvalidYear.cpp.obj	5205e309d4d02210
+11	489	7514650457488673	CMakeFiles/Exceptions.dir/ErrorClasses/InvalidDay.cpp.obj	9316aed73bd3ddca
+19	517	7514650457557940	CMakeFiles/Exceptions.dir/ErrorClasses/InvalidMonth.cpp.obj	203d7c2afdf13001
+6	881	7514650457436074	CMakeFiles/Exceptions.dir/main.cpp.obj	1bde87369f540f0e
+881	1121	7514650466181834	Exceptions.exe	30092f7960ae4391
+10	748	7514652505109405	CMakeFiles/Exceptions.dir/main.cpp.obj	1bde87369f540f0e
+749	931	7514652512492265	Exceptions.exe	30092f7960ae4391
+8	725	7514652922267888	CMakeFiles/Exceptions.dir/main.cpp.obj	1bde87369f540f0e
+726	909	7514652929441986	Exceptions.exe	30092f7960ae4391
+6	751	7514657923309824	CMakeFiles/Exceptions.dir/main.cpp.obj	1bde87369f540f0e
+752	955	7514657930761871	Exceptions.exe	30092f7960ae4391
